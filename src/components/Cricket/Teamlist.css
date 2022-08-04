@@ -1,0 +1,24 @@
+.teamlist {
+    display: flex;
+    justify-content: center;
+}
+
+.teamlist h1 {
+    font-size: 1.8rem;
+    color: #ff0000f8;
+}
+
+.team {
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.team ul {
+    margin: 0;
+    padding: 0;
+}
+
+.team li {
+    margin: 8px;
+}

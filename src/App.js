@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Card from "./components/UI/card";
+import Header from "./components/Layout/Header";
+import Scoreboard from "./components/Cricket/Scoreboard";
+import Teams from './components/Cricket/Teams';
 
 function App() {
+
+  const [showScoreBoard, setShowScoreBoard] = useState(false);
+
+  const scoreboardShownHandler = () => {
+    setShowScoreBoard(true);
+  }
+
+  const scoreboardHideHandler = () => {
+    setShowScoreBoard(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Card>
+          <Header />
+          {showScoreBoard && <Teams onHideScoreboard={scoreboardHideHandler} /> }
+          <Scoreboard onShowScoreboard={scoreboardShownHandler} />
+        </Card>
     </div>
   );
 }

@@ -1,0 +1,36 @@
+.scoreboard {
+    background-color: #107ceec9;
+    color: #08010bd3;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.head {
+    background-color: #120E43;
+    color: #23C4ED;
+    font-family:'Courier New', Courier, monospace;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.teams {
+    color: #C7C11A;
+    background-color: #242B2E;
+    padding: 5px;
+    margin-top: 16px;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #3DBE29;
+    padding: 8px;
+    border-radius: 16px;
+    color: hsl(264, 78%, 43%);
+    font-size: 1rem;
+}
+
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
